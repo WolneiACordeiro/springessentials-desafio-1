@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ShippingService {
-    public static Double Shipment(Order order){
+    public Double Shipment(Order order){
         if (order.getBasic() < 100.00){
             order.setBasic(order.getBasic()+20.00);
         } else if ((order.getBasic() >= 100.00) && (order.getBasic() <= 200.00)) {
